@@ -1,0 +1,14 @@
+# IntellijIdea files
+.idea
+out
+*.iml
+
+# Maven target files
+target
+
+# Other files
+bin
+*.txt
+*.bin
+School.xml
+School.json
