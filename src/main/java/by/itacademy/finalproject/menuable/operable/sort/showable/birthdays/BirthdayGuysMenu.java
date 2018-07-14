@@ -1,4 +1,4 @@
-package by.itacademy.finalproject.menuable.operable.sort.birthdays;
+package by.itacademy.finalproject.menuable.operable.sort.showable.birthdays;
 
 import by.itacademy.finalproject.domain.School;
 import by.itacademy.finalproject.inputable.IntegerInput;

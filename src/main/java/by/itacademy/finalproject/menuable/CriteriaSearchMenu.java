@@ -2,7 +2,7 @@ package by.itacademy.finalproject.menuable;
 
 import by.itacademy.finalproject.domain.School;
 import by.itacademy.finalproject.inputable.IntegerInput;
-import by.itacademy.finalproject.menuable.operable.sort.birthdays.BirthdayGuysMenu;
+import by.itacademy.finalproject.menuable.operable.sort.showable.birthdays.BirthdayGuysMenu;
 import by.itacademy.finalproject.menuable.operable.sort.scheduled.ScheduleMenu;
 
 import java.util.ArrayList;

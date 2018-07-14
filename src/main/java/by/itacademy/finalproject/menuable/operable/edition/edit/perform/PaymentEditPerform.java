@@ -1,5 +1,6 @@
 package by.itacademy.finalproject.menuable.operable.edition.edit.perform;
 
+import by.itacademy.finalproject.domain.FutureDateTimeException;
 import by.itacademy.finalproject.domain.Payment;
 import by.itacademy.finalproject.domain.formatter.DateTimeFormat;
 import by.itacademy.finalproject.inputable.LocalDateInput;
@@ -19,7 +20,7 @@ public class PaymentEditPerform implements EditPerform<Set<Payment>> {
     private PaymentConsoleCreator creator = new PaymentConsoleCreator();
 
     @Edit(typo = "Add payment to payments history", name = "add")
-    public boolean addPayment(Set<Payment> payments) {
+    public boolean addPayment(Set<Payment> payments) throws FutureDateTimeException {
         Payment student = creator.createInstance();
         if (!payments.contains(student)) {
             payments.add(student);

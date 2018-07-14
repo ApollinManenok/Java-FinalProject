@@ -11,7 +11,9 @@ public class Payment {
     public Payment() {
     }
 
-    public Payment(LocalDate date, int amount) {
+    public Payment(LocalDate date, int amount) throws FutureDateTimeException {
+        if(date.isAfter(LocalDate.now()))
+            throw new FutureDateTimeException("Date is in future!");
         this.date = date;
         this.amount = amount;
     }

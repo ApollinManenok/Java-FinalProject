@@ -1,5 +1,6 @@
 package by.itacademy.finalproject.menuable.operable.edition.create;
 
+import by.itacademy.finalproject.domain.FutureDateTimeException;
 import by.itacademy.finalproject.domain.Payment;
 import by.itacademy.finalproject.domain.formatter.DateTimeFormat;
 import by.itacademy.finalproject.inputable.IntegerInput;
@@ -12,7 +13,7 @@ public class PaymentConsoleCreator implements ConsoleCreator<Payment> {
     private IntegerInput integerInput = new IntegerInput();
 
     @Override
-    public Payment createInstance() {
+    public Payment createInstance() throws FutureDateTimeException {
         LocalDate date = localDateInput.getValue("Enter payment date (" + DateTimeFormat.D_M_YYYY_DOT + ")");
         int amount = integerInput.getValue("Enter payment amount");
         return new Payment(date, amount);

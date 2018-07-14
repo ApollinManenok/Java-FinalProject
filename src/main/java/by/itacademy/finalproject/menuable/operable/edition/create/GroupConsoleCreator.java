@@ -1,9 +1,6 @@
 package by.itacademy.finalproject.menuable.operable.edition.create;
 
-import by.itacademy.finalproject.domain.Classroom;
-import by.itacademy.finalproject.domain.Group;
-import by.itacademy.finalproject.domain.Student;
-import by.itacademy.finalproject.domain.Teacher;
+import by.itacademy.finalproject.domain.*;
 import by.itacademy.finalproject.domain.schedule.Schedule;
 import by.itacademy.finalproject.inputable.StringInput;
 
@@ -17,7 +14,7 @@ public class GroupConsoleCreator implements ConsoleCreator<Group> {
     private ScheduleConsoleCreator scheduleCreator = new ScheduleConsoleCreator();
     private StudentConsoleCreator studentCreator = new StudentConsoleCreator();
 
-    public Group createInstance() {
+    public Group createInstance() throws FutureDateTimeException {
         String name = stringInput.getValue("Enter group name");
         Teacher teacher = teacherCreator.createInstance();
         Classroom classroom = classroomCreator.createInstance();
@@ -26,7 +23,7 @@ public class GroupConsoleCreator implements ConsoleCreator<Group> {
         return new Group(name, teacher, classroom, schedule, students);
     }
 
-    private Set<Student> getStudents() {
+    private Set<Student> getStudents() throws FutureDateTimeException {
         Set<Student> temp = new HashSet<>();
         boolean term;
         do {

@@ -1,5 +1,6 @@
 package by.itacademy.finalproject.menuable.operable.edition.edit.perform;
 
+import by.itacademy.finalproject.domain.FutureDateTimeException;
 import by.itacademy.finalproject.domain.Student;
 import by.itacademy.finalproject.inputable.StringInput;
 import by.itacademy.finalproject.menuable.operable.edition.create.StudentConsoleCreator;
@@ -16,7 +17,7 @@ public class StudentsEditPerform implements EditPerform<Set<Student>> {
     private ReflectiveEditor<Student> editor = new ReflectiveEditor<>(new StudentEditPerform());
 
     @Edit(typo = "Add student into students list", name = "add")
-    public boolean addStudent(Set<Student> students) {
+    public boolean addStudent(Set<Student> students) throws FutureDateTimeException {
         Student student = creator.createInstance();
         if (!students.contains(student)) {
             students.add(student);

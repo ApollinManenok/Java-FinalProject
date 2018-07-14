@@ -14,8 +14,10 @@ public class Student {
     public Student() {
     }
 
-    public Student(String name, LocalDate bDay) {
+    public Student(String name, LocalDate bDay) throws FutureDateTimeException {
         this.name = name;
+        if(bDay.isAfter(LocalDate.now()))
+            throw new FutureDateTimeException("Date is in future!");
         this.bDay = bDay;
         this.payments = new HashSet<>();
     }

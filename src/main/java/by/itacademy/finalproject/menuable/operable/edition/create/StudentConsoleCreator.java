@@ -1,5 +1,6 @@
 package by.itacademy.finalproject.menuable.operable.edition.create;
 
+import by.itacademy.finalproject.domain.FutureDateTimeException;
 import by.itacademy.finalproject.domain.Payment;
 import by.itacademy.finalproject.domain.Student;
 import by.itacademy.finalproject.domain.formatter.DateTimeFormat;
@@ -16,7 +17,7 @@ public class StudentConsoleCreator implements ConsoleCreator<Student> {
     private PaymentConsoleCreator paymentCreator = new PaymentConsoleCreator();
 
     @Override
-    public Student createInstance() {
+    public Student createInstance() throws FutureDateTimeException {
         String name = stringInput.getValue("Enter student name");
         LocalDate bDay = localDateInput.getValue("Enter student birthday (" + DateTimeFormat.D_M_YYYY_DOT + ")");
         Set<Payment> payments = new HashSet<>();
@@ -26,7 +27,7 @@ public class StudentConsoleCreator implements ConsoleCreator<Student> {
         return new Student(name, bDay, payments);
     }
 
-    private void fillPayments(Set<Payment> payments) {
+    private void fillPayments(Set<Payment> payments) throws FutureDateTimeException {
         boolean term;
         do {
             payments.add(paymentCreator.createInstance());

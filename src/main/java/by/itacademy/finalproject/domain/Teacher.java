@@ -12,8 +12,10 @@ public class Teacher {
 
     }
 
-    public Teacher(String fullName, LocalDate bDay) {
+    public Teacher(String fullName, LocalDate bDay) throws FutureDateTimeException {
         this.name = fullName;
+        if(bDay.isAfter(LocalDate.now()))
+            throw new FutureDateTimeException("Date is in future!");
         this.bDay = bDay;
     }
 
