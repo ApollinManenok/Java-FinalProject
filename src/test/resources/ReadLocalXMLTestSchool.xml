@@ -1,0 +1,65 @@
+<School>
+    <schoolName>Start</schoolName>
+    <groups>
+        <group>
+            <name>Star</name>
+            <teacher>
+                <name>Barbara Jones</name>
+                <birthday>7-7-1978</birthday>
+            </teacher>
+            <group>100</group>
+            <schedule>Friday 12:30 - 14:30</schedule>
+            <students>
+                <student>
+                    <name>Jane Collins</name>
+                    <birthday>17-1-1995</birthday>
+                    <payments/>
+                </student>
+                <student>
+                    <name>Chuck Norris</name>
+                    <birthday>25-2-1970</birthday>
+                    <payments>
+                        <payment>
+                            <date>14-7-2018</date>
+                            <amount>50</amount>
+                        </payment>
+                        <payment>
+                            <date>1-6-2018</date>
+                            <amount>50</amount>
+                        </payment>
+                    </payments>
+                </student>
+                <student>
+                    <name>Brad Pete</name>
+                    <birthday>26-6-1984</birthday>
+                    <payments/>
+                </student>
+            </students>
+        </group>
+        <group>
+            <name>Rose</name>
+            <teacher>
+                <name>Peter Parker</name>
+                <birthday>24-9-1956</birthday>
+            </teacher>
+            <group>100</group>
+            <schedule>Monday 10:30 - 11:30, Wednesday 10:30 - 11:30</schedule>
+            <students>
+                <student>
+                    <name>Jane Smith</name>
+                    <birthday>13-10-1995</birthday>
+                    <payments>
+                        <payment>
+                            <date>3-2-2018</date>
+                            <amount>150</amount>
+                        </payment>
+                        <payment>
+                            <date>8-4-2018</date>
+                            <amount>150</amount>
+                        </payment>
+                    </payments>
+                </student>
+            </students>
+        </group>
+    </groups>
+</School>

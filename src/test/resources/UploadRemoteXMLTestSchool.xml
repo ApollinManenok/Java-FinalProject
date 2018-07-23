@@ -1,0 +1,40 @@
+<School>
+    <schoolName>Start</schoolName>
+    <groups>
+        <group>
+            <name>High</name>
+            <teacher>
+                <name>Helena Smith</name>
+                <birthday>13-10-1993</birthday>
+            </teacher>
+            <group>101</group>
+            <schedule>Friday 10:30 - 12:30</schedule>
+            <students>
+                <student>
+                    <name>William Armstrong</name>
+                    <birthday>22-6-1983</birthday>
+                    <payments/>
+                </student>
+                <student>
+                    <name>Jane Smith</name>
+                    <birthday>13-10-1978</birthday>
+                    <payments>
+                        <payment>
+                            <date>14-7-2018</date>
+                            <amount>50</amount>
+                        </payment>
+                        <payment>
+                            <date>1-6-2018</date>
+                            <amount>50</amount>
+                        </payment>
+                    </payments>
+                </student>
+                <student>
+                    <name>Lucy Lu</name>
+                    <birthday>15-4-1975</birthday>
+                    <payments/>
+                </student>
+            </students>
+        </group>
+    </groups>
+</School>
